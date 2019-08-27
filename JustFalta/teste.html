@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Recolhendo DIV</title>
+        <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#btnClick").click(function(){
+                    $("#dvConteudo").slideToggle("fast");
+                     
+                    if($("#btnClick").html() == "+"){
+                        $("#btnClick").text("-");
+                    }else{
+                        $("#btnClick").text("+");
+                    }
+                     
+                });
+            });
+        </script>
+        <style>
+            .dvPrincipal{
+                width:100%;
+                max-width: 500px;
+                background-color: #87CEFA;
+            }
+             
+            .dvBarra{
+                background-color: #1E90FF;
+                padding: 5px;
+                color: #FFF;
+                font-weight: bold;
+                font-family: Segoe UI;
+            }
+             
+            #btnClick{
+                cursor: pointer;
+                font-size: 20px;
+                color: #FFF;
+                margin-right:5px;
+            }
+             
+            #btnClick:hover{
+                color: #AFEEEE;
+            }
+             
+            #dvConteudo{
+                /*Determinando o estado inicial da DIV, como oculta*/
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="dvPrincipal">
+            <div class="dvBarra">
+                <span>Aqui vem seu Título <span id="btnClick">+</span></span>
+            </div>
+             
+            <div id="dvConteudo">
+                <!--Dentro desta DIV vem o conteúdo, seja vídeo, imagem ou texto-->
+                <p>Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto</p>
+                <p>Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto</p>
+                <p>Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto</p>
+                <p>Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto</p>
+            </div>
+        </div>
+    </body>
+</html>
